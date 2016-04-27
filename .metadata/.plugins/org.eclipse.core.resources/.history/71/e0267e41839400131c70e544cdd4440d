@@ -1,0 +1,102 @@
+package burgertime;
+
+import java.util.ArrayList;
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengb.
+ *         Created Feb 2, 2014.
+ */
+
+public class Level{
+	private ArrayList<Drawable> components;
+	private int level;
+	private boolean isModified;
+	
+	
+	
+	public Level(int numberOfLevel){
+		this.components = new ArrayList<Drawable>();
+		this.level = numberOfLevel;
+		
+	}
+	public void addcomponent(Drawable component){
+
+		
+		this.components.add(component);
+//		printComponents();
+	}
+	public void modifyCoordinate(){
+		for(Drawable temp: this.components){
+			temp.getCoordinate().reSet(temp.getCoordinate().getX() + 10,temp.getCoordinate().getY());
+		}
+		this.isModified = true;
+	}
+	
+	public int getFrameHeight(){
+		int max = 0;
+		for(Drawable temp: this.components){
+			if(temp.getCoordinate().getY() > max){
+				max = temp.getCoordinate().getY();
+			}
+		}
+		return max+40;
+	}
+	
+	public int getFrameWidth(){
+		int max = 0;
+		for(Drawable temp: this.components){
+			
+			if(temp.getCoordinate().getX() > max){
+				max = temp.getCoordinate().getX();
+			}
+		}
+		if(!this.isModified){
+			return max+21;
+		}
+		return max+11;
+	}
+	public int getLevel(){
+		return level;	
+	}
+	
+	public ArrayList<Drawable> getComponents(){
+		return this.components;
+	}
+	
+	public void printComponents(){
+		for(Drawable temp: this.components){
+			System.out.println(temp.getCoordinate().getX()+","+temp.getCoordinate().getY());
+		}
+	}
+	
+	public Hero getHero(){
+		for(Drawable temp: this.components){
+			if (temp.getClass().equals(Hero.class)){
+				return (Hero) temp;
+			}
+		}
+		return null;
+
+	}
+	public ArrayList<Enemy> getEnemy(){
+		ArrayList<Enemy> tempList = new ArrayList<Enemy>();
+		for(Drawable temp: this.components){
+			if(temp.getClass().equals(Enemy.class)){
+				tempList.add((Enemy) temp);
+			}
+		}
+		return tempList;
+	}
+	
+	public ArrayList<Burger> getBurger(){
+		ArrayList<Burger> tempList = new ArrayList<Burger>();
+		for(Drawable temp: this.components){
+			if(temp.getClass().equals(Enemy.class)){
+				tempList.add((Burger) temp);
+			}
+		}
+		return tempList;
+	}
+}

@@ -1,0 +1,116 @@
+package burgertime;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author wangx3.
+ *         Created Feb 2, 2014.
+ */
+public class Enemy implements Movable{
+	private Coordinate startPosition;
+	private Coordinate currentPosition;
+	private int timeInterval;
+	private boolean move;
+	private int index;
+	
+	public Enemy(Coordinate startPosition, int index){
+		this.startPosition = startPosition;
+		this.currentPosition = startPosition;
+		this.move = true;
+		this.index = index;
+	}
+	
+	public int getIndex(){
+		return this.index;
+	}
+	
+	@Override
+	public Coordinate moveToRight() {
+		while(this.move == true){
+		int x = this.currentPosition.getX()+1;
+		int y = this.currentPosition.getY();
+		this.currentPosition.reSet(x,y);
+		}
+		return this.currentPosition;
+	}
+
+	@Override
+	public Coordinate moveToLeft() {
+		while(this.move == true){
+		int x = this.currentPosition.getX()-1;
+		int y = this.currentPosition.getY();
+		this.currentPosition.reSet(x,y);
+		}
+		return this.currentPosition;
+	}
+
+	@Override
+	public Coordinate moveUpword() {
+		while(this.move==true){
+		int x = this.currentPosition.getX();
+		int y = this.currentPosition.getY()-1;
+		this.currentPosition.reSet(x,y);
+		}
+		return this.currentPosition;
+	}
+
+	@Override
+	public Coordinate moveDown() {
+		while(this.move==true){
+		int x = this.currentPosition.getX();
+		int y = this.currentPosition.getY()+1;
+		this.currentPosition.reSet(x,y);
+		}
+		return this.currentPosition;
+	}
+
+	@Override
+	public boolean stop() {
+		this.move=false;
+		return this.move;
+	}
+
+	@Override
+	public boolean continueGame() {
+		this.move=true;
+		return this.move;
+	}
+	
+	public Coordinate getPosition(){
+		return this.currentPosition;
+	}
+
+	@Override
+	public void drawOn(Graphics g, int multiplier) {
+		Graphics2D g2 = (Graphics2D) g;
+		int recX = (this.currentPosition.getX())*multiplier;
+		int recY = (this.currentPosition.getY()-7)*multiplier;
+		
+		g.setColor(Color.RED);
+		Rectangle square = new Rectangle(recX, recY, 4*multiplier, 8*multiplier);
+		g2.fill(square);
+		
+	}
+
+	@Override
+	public Coordinate getCoordinate() {
+		return this.currentPosition;
+	}
+
+	/**
+	 * TODO Put here a description of what this method does.
+	 *
+	 */
+	public void die() {
+		// TODO Auto-generated method stub.
+		
+	}
+	
+	
+
+}

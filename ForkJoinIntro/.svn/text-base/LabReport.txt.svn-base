@@ -1,0 +1,11 @@
+Use this file to reflect on the potential benefits of ForkJoin parallelism.
+
+1.  Who worked on this assignment with you? (please include both names and net ids)
+Bo Peng(pengb)
+2.  Is a parallel solution always better than a sequential solution? Why or why not?
+No, when SEQUENTIAL_THRESHOLD is relative small, parallel solutions are not better than the sequential solutions.
+
+
+3.  Why does adjusting the sequential threshold affect the runtime of the algorithm?  If you were to write another parallel algorithm, how would you decide what to set the sequential threshold to for maximum speed?
+The reason is that the mergesort algorithm combines both parallel and sequential threshold. The parallel would spend more time if the sequential threshold is pretty small.It needs extra time divide it's own sequence.
+I would like to set the sequential threshold to 500,000.

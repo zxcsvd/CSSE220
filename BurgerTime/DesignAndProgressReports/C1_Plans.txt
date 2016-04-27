@@ -1,0 +1,47 @@
+Loderunner Cycle 1 plans:
+
+Team #20          Members:Bo Peng, Xiaomo Wang
+
+USER STORIES:
+31.When the user starts the game, a main frame should appear.
+1.When the user press the "New Game" button on the main screen, load level1 file.(Just create a new game yet)
+6.When the user press "P" key in the game, the program will pause(all enemies and the hero are stop moving)
+7.When the user press "right" key in the game while the hero is standing on the floor, the hero moves right.
+8.When the user press "left" key in the game while the hero is standing on the floor, the hero moves left.
+9.When the user press "up" key in the game while the hero is on the ladder, the hero moves up.
+10.When the user press "down" key in the game while the hero is on the ladder, the hero moves down.
+12.When the hero touches enemy, the hero will be killed.
+13.When the hero hits the wall or touch the edge of the floor, it can't go though, but just stopping on it's current position.
+15.When the hero is killed, the life icon(number) minus one when hero dies.
+17.When the hero is killed, the hero and the enemy will be reset to its original position.
+
+List the user stories that you plan to implement in cycle 1:
+Bo Peng: 
+Main Menu
+31
+1
+15
+17
+Finished Level reader, which can read level files and create the game according to the file.
+
+Xiaomo Wang:
+6
+7
+8
+9
+10
+12
+13
+
+RESEARCH:   
+What information/techniques does your team need to research, and who is assigned to investigate what?
+Bo: file reading 
+Xiaomo: keyboard reading
+
+
+
+
+
+MISC:
+Describe any other aspects of your plans for cycle 1.
+Main GUI. 

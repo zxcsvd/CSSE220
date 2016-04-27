@@ -1,0 +1,140 @@
+package burgertime;
+
+import java.io.File;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengb.
+ *         Created Feb 2, 2014.
+ */
+public class LevelLoader {
+
+	private int level;
+	private Scanner inScanner;
+	public LevelLoader(int level){
+		this.level = level;
+		String fileName = "Level"+level+".txt";
+		this.inScanner = null;
+		try{
+			URL url = getClass().getResource(fileName);
+			File levelInformation = new File(url.getPath());
+			this.inScanner = new Scanner(levelInformation);
+		}catch(Exception e){
+			System.err.print("File Not Found!");
+		}
+	}
+	
+	public void loadGame(){
+		
+		Level newLevel = new Level(this.level);
+		try {
+			int counter = 0;
+			int row = 0;
+			int xPosition = 0;
+			int yPosition = 0;
+			while (this.inScanner.hasNextInt()) {
+				
+				int currentInt = this.inScanner.nextInt();
+				if(currentInt == -1){
+					counter++;
+				}
+				else{
+					if(counter == 1){
+						loadFloor(this.inScanner, newLevel);
+					}
+					if(counter == 2){
+						loadLadder(this.inScanner, newLevel);
+					}
+					if(counter == 3 ){
+						loadHero(this.inScanner, newLevel);
+					}
+					if(counter == 4){
+						loadEnemy(this.inScanner, newLevel);
+					}	
+					if(counter >= 5 && counter <= 8 ){
+						int column = counter - 5;
+
+						loadBurgerAndPlates(this.inScanner, row % 4, column, newLevel);
+						row++;
+					}
+				}
+
+				
+				
+					
+			}
+
+		} catch (Exception exception) {
+			
+			exception.printStackTrace();
+		}			
+		
+		finally{
+			
+		}
+		
+		System.out.print(newLevel.getComponents().size());
+		BurgerTime newGame = new BurgerTime(newLevel);
+	}
+	
+	public void loadFloor(Scanner scan, Level level){
+		Coordinate startPoint = new Coordinate(scan.nextInt(), scan.nextInt());
+		int length = scan.nextInt();
+		for(int j=0; j<2; j++){
+			for(int i=0; i<length; i++){
+				Coordinate newPoint = new Coordinate(startPoint.getX()+i,startPoint.getY()+j);
+				level.addcomponent(new Floor(newPoint));
+				
+			}
+		}
+	}
+	
+	public void loadLadder(Scanner scan, Level level){
+		Coordinate startPoint = new Coordinate(scan.nextInt(), scan.nextInt());
+		int length = scan.nextInt();
+		for(int j=0; j<length; j++){
+			for(int i=0; i<5; i++){
+				Coordinate newPoint = new Coordinate(startPoint.getX()+i,startPoint.getY()+j);
+				level.addcomponent(new Ladder(newPoint));	
+			}
+		}
+	}
+	
+	public void loadHero(Scanner scan, Level level){
+		Coordinate startPoint = new Coordinate(scan.nextInt(), scan.nextInt());
+		Movable player= new Hero(startPoint);
+		level.addcomponent(player);
+	}
+	
+	public void loadEnemy(Scanner scan, Level level){
+		Coordinate startPoint = new Coordinate(scan.nextInt(), scan.nextInt());
+		Movable enemy= new Enemy(startPoint);
+		level.addcomponent(enemy);
+	}
+	
+	public void loadBurgerAndPlates(Scanner scan, int row, int column, Level level){
+		Coordinate startPoint = new Coordinate(scan.nextInt(), scan.nextInt());
+		int length = scan.nextInt();
+		for(int i=0; i<length; i++){
+			Coordinate newPoint = new Coordinate(startPoint.getX()+i,startPoint.getY());
+			Movable burger = new Burger(newPoint, row, column);
+			
+//			System.out.println(burger.getCoordinate().getX()+" "+burger.getCoordinate().getY() + " "+ row + " " + column);
+			level.addcomponent(burger);
+		}
+		if(row == 3){
+			for(int i=0; i<length; i++){
+				Coordinate newPoint = new Coordinate(startPoint.getX() + i,startPoint.getY() + 16);
+				Plate plates = new Plate(newPoint);
+				level.addcomponent(plates);
+			}
+		}
+	
+	}
+
+	
+}

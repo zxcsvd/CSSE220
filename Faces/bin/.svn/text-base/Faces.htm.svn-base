@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title> Faces! </title>
+  </head>
+  <body>
+    <p>
+    Here is the Faces applet:
+    </p>
+    <applet code="FacesApplet.class" width=500 height=400>
+    </applet>
+    </html>
+  <body>
+<html>

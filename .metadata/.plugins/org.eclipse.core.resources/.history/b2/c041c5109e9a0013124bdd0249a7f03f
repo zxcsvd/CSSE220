@@ -1,0 +1,177 @@
+package burgertime;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.util.ArrayList;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+import javax.swing.JComponent;
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengdi.
+ *         Created Feb 16, 2014.
+ */
+public class BurgerFallingComponent implements Runnable{
+	private ArrayList<Burger> fallingInformation;
+	private ArrayList<Floor> floorInformation;
+	private ArrayList<Plate> plateInformation;
+	private Level levelInformation;
+	private BurgerTime game;
+	private int row;
+	private int column;
+	private int index;
+	private ArrayList<ArrayList<Burger>> sortedBurgerComponent;
+	private ArrayList<Coordinate> fallingBurger;
+	private boolean breaker = true;
+	
+	public static final int PIXEL_MULTIPLIER = 5;
+
+	public static final int FRAMES_PER_SECOND = 30;
+	public static final int REPAINT_INTERVAL_MS = 1000/FRAMES_PER_SECOND;
+	
+	public BurgerFallingComponent(ArrayList<Burger> fallingInformation, int index, BurgerTime game){
+		
+		this.game = game;
+		this.levelInformation = this.game.getLevelInformation();
+		this.floorInformation = this.levelInformation.getFloor();
+		this.fallingInformation = fallingInformation;
+		this.plateInformation = this.levelInformation.getPlate();
+		this.index = index;
+		this.row = this.fallingInformation.get(0).getRow();
+		this.column = this.fallingInformation.get(0).getColumn();
+		this.fallingBurger = this.game.getFallingBurger();
+		this.sortedBurgerComponent = this.game.getSortedBurgerComponent();
+		
+//		System.out.println("component");
+//		System.out.println(this.fallingInformation.size());
+
+	}
+	
+	@Override
+	public void run() {
+//		Lock lock = new ReentrantLock();
+//		lock.lock();
+		try{
+//			boolean breaker = true;
+			
+			while(this.breaker){
+				
+				for(int k=0; k<this.fallingInformation.size(); k++){
+
+					this.fallingInformation.get(k).isStepped = false;
+				}
+				
+				
+				for(int i=0; i<this.fallingInformation.size();i++){
+			
+					
+					this.fallingInformation.get(i).move(0, 1);
+					
+				}
+
+
+
+				if(this.row<3){
+					ArrayList<Burger> burgerUnder = new ArrayList<Burger>();
+					ArrayList<Burger> burgerAbove = new ArrayList<Burger>();
+					burgerAbove = this.sortedBurgerComponent.get(this.column*4+this.row);		
+					burgerUnder = this.sortedBurgerComponent.get(this.column*4+this.row+1);
+					
+					if(burgerUnder.get(0).getIsFalling()){
+						//System.out.println("falling" + this.column + " " + this.row);
+						for(int i=0; i<this.floorInformation.size();i++){
+							if(burgerAbove.get(0).getCoordinate().getX() == this.floorInformation.get(i).getCoordinate().getX()){
+								if(burgerAbove.get(0).getCoordinate().getY()+1 == this.floorInformation.get(i).getCoordinate().getY()){
+									
+									burgerAbove.get(0).setIsFalling(false);
+									this.breaker = false;
+									break;
+								} 
+							}
+						}
+					}
+					
+					if(!burgerUnder.get(0).isOnThePlate()){
+						for(int i=0; i<this.floorInformation.size();i++){
+							boolean touchFloor = (this.floorInformation.get(i).getCoordinate().getX() == burgerAbove.get(0).getCoordinate().getX() && this.floorInformation.get(i).getCoordinate().getY() == burgerAbove.get(0).getCoordinate().getY()+1);
+							if(touchFloor){
+								burgerAbove.get(0).setIsFalling(false);
+								this.breaker = false;
+								break;
+							}
+							
+							if(burgerAbove.get(0).getCoordinate().getY()+2 >= burgerUnder.get(0).getCoordinate().getY()){
+								for(Burger temp: burgerUnder){
+	//								System.out.println("setting is stepped to true");
+									burgerAbove.get(0).setIsFalling(false);
+									if(temp.isStepped){
+										temp.isStepped = false;
+										temp.move(0, -1);
+										this.game.detectBurgerStepped();
+									}
+									temp.isStepped = true;
+									this.game.detectBurgerStepped();
+									this.game.burgerAllStepped();
+								}
+	
+							}
+						}
+					}
+	
+					if(burgerUnder.get(0).isOnThePlate()){
+						if(burgerAbove.get(0).getCoordinate().getY()+2 >= burgerUnder.get(0).getCoordinate().getY()){
+							for(Burger temp: burgerUnder){
+								burgerAbove.get(0).setIsOnPlate(true);
+								this.game.detectWin();
+								breaker = false;
+								break;
+							}
+							
+						}
+					}
+				}
+				if(this.row == 3){
+					ArrayList<Burger> burgerTemp = new ArrayList<Burger>();
+					burgerTemp = this.sortedBurgerComponent.get(this.column*4+this.row);	
+					for(Burger temp : burgerTemp){
+						for(int i=0; i<this.floorInformation.size();i++){
+							if(temp.getCoordinate().getX() == this.floorInformation.get(i).getCoordinate().getX()){
+								if(temp.getCoordinate().getY()+1 == this.floorInformation.get(i).getCoordinate().getY()){
+									breaker = false;
+									break;
+								}
+							}
+						}
+					}
+					for(Burger temp: burgerTemp){
+						for(int j=0; j<this.plateInformation.size();j++){
+							if(temp.getCoordinate().getX() == this.plateInformation.get(j).getCoordinate().getX()){
+								if(temp.getCoordinate().getY()+1== this.plateInformation.get(j).getCoordinate().getY()){
+									temp.setIsOnPlate(true);
+									breaker = false;
+									break;
+								}
+							}
+						}
+					}
+				}
+				Thread.sleep(50);
+				
+			}
+//			lock.unlock();
+				
+				
+			
+			
+		}catch(InterruptedException exception){
+			
+		}
+		
+	}
+	
+	
+}

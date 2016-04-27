@@ -1,0 +1,96 @@
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
+
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengdi.
+ *         Created Mar 4, 2014.
+ */
+public class Tetris {
+	private int level = 1;
+	private JFrame tetrisFrame;
+	private int score = 0;
+	private int multiplier = 0;
+	private static int GAME_BOARD_WIDTH = 240;
+	private static int GAME_BOARD_LENGTH = 480;
+	private final static  int LEFT_MARGIN = 50;
+	private final static int UP_MARGIN = 35;
+	private final static int BORDER_MARGIN = 20;
+	
+	public Tetris(){
+		this.level = 1;
+		loadGameFrame();
+		loadStaticElement();
+//		loadTetrisLabels();
+	}
+
+	public void loadGameFrame(){
+		this.tetrisFrame = new JFrame("Game Start!" + " " + "Level:" + this.level);
+		this.tetrisFrame.setSize(450,600);
+		this.tetrisFrame.setLocationRelativeTo(null);
+		this.tetrisFrame.getContentPane().setBackground(Color.black);
+		
+		this.tetrisFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.tetrisFrame.setVisible(true);
+	}
+	
+	public void loadStaticElement(){
+
+
+		JPanel mainPanel = new JPanel();
+		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
+		mainPanel.setMinimumSize(new Dimension(450, 600));
+		
+		JPanel leftPanel = new JPanel();
+		JPanel rightPanel = new JPanel();
+		leftPanel.setBackground(Color.black);
+		
+		rightPanel.setBackground(Color.RED);
+		
+
+		leftPanel.setMaximumSize(new Dimension(310, 600));
+		rightPanel.setMaximumSize(new Dimension(240, 600));
+		
+		LoadGameBoard gameBoard = new LoadGameBoard();
+		gameBoard.setBackground(Color.blue);
+		
+		
+//		this.tetrisFrame.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+//		Border paneEdge = BorderFactory.createEmptyBorder(0,10,10,10);
+//		leftPanel.setBorder(paneEdge);
+		
+		leftPanel.add(gameBoard);
+		mainPanel.add(leftPanel);
+		mainPanel.add(rightPanel);
+		this.tetrisFrame.add(mainPanel);
+		
+		
+	}
+	
+	public void loadTetrisLabels(){
+//		this.tetrisFrame.setLayout(null);
+		JPanel scorePanel = new JPanel();
+		String score = new String(this.score+"");
+		JLabel scoreLabel = new JLabel(score);
+		scorePanel.add(scoreLabel);
+//		this.tetrisFrame.add()
+		
+		
+	}
+
+}
+

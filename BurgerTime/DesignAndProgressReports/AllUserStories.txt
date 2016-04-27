@@ -1,0 +1,33 @@
+1.When the user press the "New Game" button on the main screen, load level1 file.
+2.When the user finishes current level, load next level file.
+3.When the hero's life is 0, the program will record the score and ask user's name.
+4.When the user press "U" key in the game, the program will load next level file.
+5.When the user press "D" key in the game, the program will load previous level file.
+6.When the user press "P" key in the game, the program will pause(all enemies and the hero are stop moving)
+7.When the user press "right" key in the game while the hero is standing on the floor, the hero moves right.
+8.When the user press "left" key in the game while the hero is standing on the floor, the hero moves left.
+9.When the user press "up" key in the game while the hero is on the ladder, the hero moves up.
+10.When the user press "down" key in the game while the hero is on the ladder, the hero moves down.
+11.When the user press "space" key in the game while the hero is on the floor, the hero will put pepper to the direction which he is facing to.
+(if there is any pepper left)
+12.When the hero touches enemy, the hero will be killed.
+13.When the hero hits the wall or touch the edge of the floor, it can't go though, but just stopping on it's current position.
+14.When the enemy is stunned, the hero can go though without getting hurt.
+15.When the hero is killed, the life icon(number) minus one when hero dies.
+16.When the hero touches the pepper icon, the number of pepper increase 1.
+17.When the hero is killed, the hero and the enemy will be reset on its original position.
+18.When the enemy is killed by the user, the score increases.
+19.When the burger is dropped on the plate, the score increases.
+20.When the hero steps on the burger part which is not stepped before, the score increases.
+21.When the hero is moving, the enemy will try to move to the player's position.
+22.When the hero is not moving, the enemy will try to move to the player's position.
+23.When the burger dropped on the enemy, the enemy is killed.
+24.When the burger is dropping while the enemy is standing on that burger, the enemy is killed.
+25.When the enemy touches the pepper, it is stunned.
+26.When the enemy is killed, it return to its original position after several seconds.
+27.When the enemy touches the wall or gets to the edge of the floor, it turns back.
+28.When the hero steps on the burger component but not totally through it, the burger component will slides down a little bit.
+29.When the hero walks though a burger component, the burger component will fall into next floor.
+30.When the burger component is touched another burger component, the falling component stays on the floor and the touched component falls into
+next floor.
+31.When the user starts the game, a main frame should appear.

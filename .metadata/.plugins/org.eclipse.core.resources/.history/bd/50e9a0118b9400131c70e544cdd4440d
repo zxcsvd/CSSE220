@@ -1,0 +1,85 @@
+package burgertime;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengdi.
+ *         Created Feb 6, 2014.
+ */
+public class MoveListener implements KeyListener{
+	private Movable movableComponent;
+	private JFrame frame;
+	private Level levelInfo;
+	
+	public MoveListener(Movable movableComponent, JFrame frame, Level levelInfo){
+		this.movableComponent = movableComponent;
+		this.frame =frame;
+		this.levelInfo = levelInfo;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
+	 */
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		this.movableComponent.continueGame();
+		if(e.getKeyCode()==37)
+		{
+			this.movableComponent.moveToLeft();
+//			BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+//			System.out.print("1");
+//			frame.add(drawing);
+//			frame.repaint();
+		}
+		if(e.getKeyCode()==38)
+		{
+			this.movableComponent.moveUpword();
+//			BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+//			System.out.print("1");
+//			frame.add(drawing);
+//			frame.repaint();
+		}
+		if(e.getKeyCode()==39)
+		{
+			this.movableComponent.moveToRight();
+//			BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+//			System.out.print("1");
+//			frame.add(drawing);
+//			frame.repaint();
+		}
+		if(e.getKeyCode()==40)
+		{
+			this.movableComponent.moveDown();
+//			BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+//			System.out.print("1");
+//			frame.add(drawing);
+//			frame.repaint();
+		}
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
+	 */
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		this.movableComponent.stop();
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
+	 */
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+	}
+	
+}

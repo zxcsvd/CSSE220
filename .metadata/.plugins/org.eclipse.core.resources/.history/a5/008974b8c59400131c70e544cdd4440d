@@ -1,0 +1,172 @@
+package burgertime;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengb.
+ *         Created Feb 5, 2014.
+ */
+public class BurgerTime {
+	
+	private Level levelInformation;
+	public static final int PIXEL_MULTIPLIER = 5;
+	private int level;
+	private ArrayList<Drawable> components;
+	
+
+	public BurgerTime(Level levelInformation){
+		this.levelInformation = levelInformation;
+		this.components = levelInformation.getComponents();
+		this.level = levelInformation.getLevel();
+		int windowWidth = this.levelInformation.getFrameWidth()*PIXEL_MULTIPLIER;
+		int windowHeight = this.levelInformation.getFrameHeight()*PIXEL_MULTIPLIER;
+		
+		
+		this.levelInformation.modifyCoordinate();
+		JFrame gameFrame = new JFrame("BurgerTime Start!  " + "Level:" + this.level);
+		gameFrame.setSize(windowWidth, windowHeight);
+		
+		
+		
+		BurgerComponent drawing = new BurgerComponent(this.levelInformation);
+		Movable currentHero = this.levelInformation.getHero();
+		
+		
+		
+		
+		class MoveListener implements KeyListener{
+			private Movable movableComponent;
+			private JFrame frame;
+			private Level levelInfo;
+			
+			public MoveListener(Movable movableComponent, JFrame frame, Level levelInfo){
+				this.movableComponent = movableComponent;
+				this.frame =frame;
+				this.levelInfo = levelInfo;
+			}
+			
+			/* (non-Javadoc)
+			 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
+			 */
+			@Override
+			public void keyPressed(KeyEvent e) {
+				// TODO Auto-generated method stub
+				this.movableComponent.continueGame();
+				if(e.getKeyCode()==37)
+				{
+					
+					this.movableComponent.moveToLeft();
+					BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+					System.out.print("1");
+					frame.add(drawing);
+					frame.repaint();
+				}
+				if(e.getKeyCode()==38)
+				{
+					this.movableComponent.moveUpword();
+					BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+					System.out.print("1");
+					frame.add(drawing);
+					frame.repaint();
+				}
+				if(e.getKeyCode()==39)
+				{
+					this.movableComponent.moveToRight();
+					BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+					System.out.print("1");
+					frame.add(drawing);
+					frame.repaint();
+				}
+				if(e.getKeyCode()==40)
+				{
+					this.movableComponent.moveDown();
+					BurgerComponent drawing = new BurgerComponent(this.levelInfo);
+					System.out.print("1");
+					frame.add(drawing);
+					frame.repaint();
+				}
+				
+			}
+
+			/* (non-Javadoc)
+			 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
+			 */
+			@Override
+			public void keyReleased(KeyEvent arg0) {
+				// TODO Auto-generated method stub
+				this.movableComponent.stop();
+				
+			}
+
+			/* (non-Javadoc)
+			 * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
+			 */
+			@Override
+			public void keyTyped(KeyEvent arg0) {
+				// TODO Auto-generated method stub
+			}
+			
+		}
+		drawing.addKeyListener(new MoveListener(currentHero, gameFrame,this.levelInformation));
+		drawing.addKeyListener(new StopListener(currentHero));
+		drawing.addKeyListener(new ContinueListener(currentHero));
+		
+		
+		gameFrame.add(drawing);
+		
+		ArrayList<Enemy> currentEnemis = this.levelInformation.getEnemy();
+		
+		for(int i=0;i<currentEnemis.size();i++){
+			drawing.addKeyListener(new StopListener(currentEnemis.get(i)));
+			drawing.addKeyListener(new ContinueListener(currentEnemis.get(i)));
+		}
+		
+		gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		gameFrame.setVisible(true);
+	}
+	public boolean detectBurgerStepped(){
+		Hero hero = this.levelInformation.getHero();
+		ArrayList<Burger> burgerList = this.levelInformation.getBurger(); 
+		for(int i=0; i<burgerList.size(); i++){
+			if(!burgerList.get(i).isStepped() && hero.getPosition().getX()==burgerList.get(i).getCoordinate().getX() && hero.getPosition().getY()==burgerList.get(i).getCoordinate().getY() ){
+				burgerList.get(i).stepped();
+				return false;
+			}
+			
+		}
+		return true;
+		
+	}
+	
+	public void detectDie(){
+		ArrayList<Enemy> enemyList = this.levelInformation.getEnemy();
+		ArrayList<Burger> burgerList = this.levelInformation.getBurger(); 
+		Hero hero = this.levelInformation.getHero();
+		for(int i=0; i<enemyList.size(); i++){
+			if(hero.getCoordinate().getX() == enemyList.get(i).getCoordinate().getX() && hero.getCoordinate().getY() == enemyList.get(i).getCoordinate().getY()){
+				hero.die();
+				return;
+			}
+		}
+		for(int i=0; i<enemyList.size(); i++){
+			for(int j=0; j<burgerList.size(); j++){
+				Enemy enemy = enemyList.get(i);
+				Burger burger = burgerList.get(j);
+				if(burgerList.get(j).isFalling()){
+					if(enemy.getCoordinate().getX() == burger.getCoordinate().getX() && enemy.getCoordinate().getY() == burger.getCoordinate().getY()){
+						enemy.die();
+						return;
+					}
+				}
+			}
+		}
+		
+	}
+		
+}

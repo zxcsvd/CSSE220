@@ -1,0 +1,187 @@
+package burgertime;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengb.
+ *         Created Feb 5, 2014.
+ */
+public class BurgerTime {
+	private int score = 0;
+	private Level levelInformation;
+	public static final int PIXEL_MULTIPLIER = 5;
+	private int level;
+	private JLabel lifeLable;
+	private JLabel scoreLable;
+	
+//	private ArrayList<Drawable> components;
+	
+
+	public BurgerTime(Level levelInformation){
+		
+		this.levelInformation = levelInformation;
+//		this.components = levelInformation.getComponents();
+		
+		
+		this.level = this.levelInformation.getLevel();
+		int lives = this.levelInformation.getHero().getLives();
+//		System.out.println(this.levelInformation.getLevel());
+		int windowWidth = this.levelInformation.getFrameWidth()*PIXEL_MULTIPLIER;
+		int windowHeight = this.levelInformation.getFrameHeight()*PIXEL_MULTIPLIER;
+		
+//		this.levelInformation.setLevel(2);
+//		System.out.println(this.levelInformation.getLevel());
+//		System.out.println(levelInformation.getLevel());
+//		
+		this.levelInformation.modifyCoordinate();
+		JFrame gameFrame = new JFrame("BurgerTime Start!  " + "Level:" + this.level);
+		gameFrame.setSize(windowWidth, windowHeight);
+		
+		testListener listener = new testListener();
+		gameFrame.addMouseListener(listener);
+		
+		this.lifeLable = new JLabel();
+		this.lifeLable.setText("Lives: " + lives);
+		this.lifeLable.setForeground(Color.GREEN);
+		this.lifeLable.setFont(new Font(this.lifeLable.getName(),Font.BOLD,15));
+		
+		this.scoreLable = new JLabel();
+		this.scoreLable.setText("Score: " + 0);
+		this.scoreLable.setForeground(Color.RED);
+		this.scoreLable.setFont(new Font(this.lifeLable.getName(),Font.BOLD,15));
+		
+		JPanel panel = new JPanel();
+		panel.add(this.lifeLable,BorderLayout.WEST);
+		panel.add(this.scoreLable,BorderLayout.SOUTH);
+		gameFrame.add(panel, BorderLayout.SOUTH);
+		
+		BurgerComponent drawing = new BurgerComponent(this.levelInformation);
+		Movable currentHero = this.levelInformation.getHero();
+		drawing.addKeyListener(new MoveListener(currentHero, drawing));
+		drawing.addKeyListener(new StopListener(currentHero));
+		drawing.addKeyListener(new ContinueListener(currentHero));
+
+		gameFrame.add(drawing);
+		detectDie();
+
+		
+		ArrayList<Enemy> currentEnemis = this.levelInformation.getEnemy();
+		
+		for(int i=0;i<currentEnemis.size();i++){
+			drawing.addKeyListener(new StopListener(currentEnemis.get(i)));
+			drawing.addKeyListener(new ContinueListener(currentEnemis.get(i)));
+		}
+		
+		gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		gameFrame.setVisible(true);
+	}
+	public boolean detectBurgerStepped(){
+		Hero hero = this.levelInformation.getHero();
+		ArrayList<Burger> burgerList = this.levelInformation.getBurger(); 
+		for(int i=0; i<burgerList.size(); i++){
+			if(!burgerList.get(i).isStepped() && hero.getPosition().getX()==burgerList.get(i).getCoordinate().getX() && hero.getPosition().getY()==burgerList.get(i).getCoordinate().getY() ){
+				burgerList.get(i).stepped();
+				return false;
+			}
+			
+		}
+		return true;
+		
+	}
+	
+	public void detectDie(){
+		ArrayList<Enemy> enemyList = this.levelInformation.getEnemy();
+		ArrayList<Burger> burgerList = this.levelInformation.getBurger(); 
+		Hero hero = this.levelInformation.getHero();
+		
+		for(int i=0; i<enemyList.size(); i++){
+			if((Math.abs(hero.getCoordinate().getX() - enemyList.get(i).getCoordinate().getX()) <  4) && (Math.abs(hero.getCoordinate().getY() - enemyList.get(i).getCoordinate().getY()) <  8)){
+				Enemy enemy = enemyList.get(i);
+				hero.die();
+				enemy.die();
+				System.out.print("Hero die");
+				return;
+			}
+		}
+		
+		for(int i=0; i<enemyList.size(); i++){
+			for(int j=0; j<burgerList.size(); j++){
+				Enemy enemy = enemyList.get(i);
+				Burger burger = burgerList.get(j);
+				if(burgerList.get(j).getIsFalling()){
+					if(enemy.getCoordinate().getX() == burger.getCoordinate().getX() && enemy.getCoordinate().getY() == burger.getCoordinate().getY()){
+						enemy.die();
+						System.out.print("Enemy die");
+						return;
+					}
+				}
+			}
+		}
+		
+	}
+	
+	
+	public void addScore(int scoreToAdd){
+		this.score = this.score + scoreToAdd;
+		String temp = this.scoreLable.getText();
+		int num = Integer.parseInt(temp.substring(temp.length()-1, temp.length()));
+		this.scoreLable.setText("Score: " + (this.score));
+	}
+	
+	public void minusLife(){
+		String temp = this.lifeLable.getText();
+		int num = Integer.parseInt(temp.substring(temp.length()-1, temp.length()));
+		this.lifeLable.setText("lives: " + (num - 1));
+	}
+	
+	public class testListener implements MouseListener{
+		private BurgerComponent component;
+		
+		public testListener(){
+
+		}
+
+		@Override
+		public void mouseClicked(MouseEvent arg0) {
+			minusLife();
+			addScore(100);
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent arg0) {
+			// TODO Auto-generated method stub.
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent arg0) {
+			// TODO Auto-generated method stub.
+			
+		}
+
+		@Override
+		public void mousePressed(MouseEvent arg0) {
+			// TODO Auto-generated method stub.
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent arg0) {
+			// TODO Auto-generated method stub.
+			
+		}
+	}
+	
+}

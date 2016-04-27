@@ -1,0 +1,85 @@
+Loderunner Cycle 1 report and Cycle 2 plans:
+
+Team #20          Members: Bo Peng, Xiaomo Wang
+
+
+CYCLE 1 REPORT:
+
+Which user stories did your team successfully implement and test?
+31.When the user starts the game, a main frame should appear.
+1.When the user press the "New Game" button on the main screen, load level1 file.(Just create a new game yet)
+15.When the hero is killed, the life icon(number) minus one when hero dies.
+17.When the hero is killed, the hero and the enemy will be reset to its original position.
+
+
+Which stories were in your plans, but did not get done?  Describe the state of each.
+6.When the user press "P" key in the game, the program will pause(all enemies and the hero are stop moving)
+7.When the user press "right" key in the game while the hero is standing on the floor, the hero moves right.
+8.When the user press "left" key in the game while the hero is standing on the floor, the hero moves left.
+9.When the user press "up" key in the game while the hero is on the ladder, the hero moves up.
+10.When the user press "down" key in the game while the hero is on the ladder, the hero moves down.
+(6.7.8.9:have finished all the listener classes, but fail to figure out where to add all these listeners.)
+12.When the hero touches enemy, the hero will be killed.
+13.When the hero hits the wall or touch the edge of the floor, it can't go though, but just stopping on it's current position.
+(12,13 do not know where to implement the code for the method)
+
+What research experiments did your team do as you learn about technologies?
+
+
+
+
+Briefly describe the main contributions of each team member during Cycle 1.
+Xiaomo Wang: finish Hero and Enemy Classes and various Listeners classes. 
+Bo Peng: Finish the Levelloader and could print the map on the frame. Could transform the level information to other classes. 
+
+CYCLE 2 PLANS:
+
+
+USER STORIES:
+6.When the user press "P" key in the game, the program will pause(all enemies and the hero are stop moving)
+7.When the user press "right" key in the game while the hero is standing on the floor, the hero moves right.
+8.When the user press "left" key in the game while the hero is standing on the floor, the hero moves left.
+9.When the user press "up" key in the game while the hero is on the ladder, the hero moves up.
+10.When the user press "down" key in the game while the hero is on the ladder, the hero moves down.
+12.When the hero touches enemy, the hero will be killed.
+13.When the hero hits the wall or touch the edge of the floor, it can't go though, but just stopping on it's current position.
+11.When the user press "space" key in the game while the hero is on the floor, the hero will put pepper to the direction which he is facing to.
+(if there is any pepper left)
+19.When the burger is dropped on the plate, the score increases.
+20.When the hero steps on the burger part which is not stepped before, the score increases.
+23.When the burger dropped on the enemy, the enemy is killed.
+24.When the burger is dropping while the enemy is standing on that burger, the enemy is killed.
+Change the LevelLoader to read burger and plate.
+
+
+List the user stories that you plan to implement in Cycle 2:
+Xiaomo Wang:
+6
+7
+8
+9
+10
+11
+12
+13
+Bo Peng:
+Finish burger Class, improve Levelloader and try to figure out algorithm of touching.
+Add Score Label and life Lable to the frame
+15.When the hero is killed, the life icon(number) minus one when hero dies.
+17.When the hero is killed, the hero and the enemy will be reset to its original position.
+19.When the burger is dropped on the plate, the score increases.
+20.When the hero steps on the burger part which is not stepped before, the score increases.
+23.When the burger dropped on the enemy, the enemy is killed.
+24.When the burger is dropping while the enemy is standing on that burger, the enemy is killed.
+
+RESEARCH:   
+What information/techniques does your team need to research, and who is assigned to investigate what?
+
+
+
+
+
+
+
+MISC:
+Describe any other aspects of your plans for cycle 2.

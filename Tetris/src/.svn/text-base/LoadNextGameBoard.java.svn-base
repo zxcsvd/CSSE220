@@ -1,0 +1,47 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+
+import javax.swing.JComponent;
+import javax.swing.JPanel;
+
+
+/**
+ * TODO Put here a description of what this class does.
+ *
+ * @author Pengdi.
+ *         Created Mar 5, 2014.
+ */
+public class LoadGameBoard extends JPanel{
+	private static int GAME_BOARD_WIDTH = 240;
+	private static int GAME_BOARD_LENGTH = 480;
+	private final static  int LEFT_MARGIN = 50;
+	private final static int UP_MARGIN = 35;
+	private final static int BORDER_MARGIN = 20;
+	private int score = 0;
+	private int level = 1;
+	private int multiplier = 0;
+	
+	public LoadGameBoard(){
+		
+	}
+	
+	@Override
+	public void paintComponent(Graphics graphics){
+		super.paintComponent(graphics);
+		Graphics2D graphics2 = (Graphics2D) graphics;
+		graphics2.setColor(Color.WHITE);
+		Rectangle gameBoard = new Rectangle(0,UP_MARGIN,GAME_BOARD_WIDTH,GAME_BOARD_LENGTH);
+//		Rectangle nextBoard = new Rectangle(LEFT_MARGIN+GAME_BOARD_WIDTH+BORDER_MARGIN,UP_MARGIN*2,90,120);
+		graphics2.draw(gameBoard);
+
+	}
+	
+	public Dimension getPreferredSize(){
+		return new Dimension(GAME_BOARD_WIDTH+2,GAME_BOARD_LENGTH+2+UP_MARGIN*2);
+	}
+	
+}

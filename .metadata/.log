@@ -1,0 +1,1177 @@
+!SESSION 2014-03-11 22:19:31.304 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-11 22:19:48.294
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-11 22:19:48.302
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-03-13 16:08:31.759 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-13 16:09:03.764
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-13 16:09:03.773
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-03-18 17:01:42.758 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-18 17:01:56.713
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-18 17:01:56.727
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 -6 2014-03-18 17:06:39.973
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Inheritance\src\linearLightsOut' is too old (format 10, created by Subversion 1.6)
+
+!STACK 0
+org.tigris.subversion.svnclientadapter.SVNClientException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Inheritance\src\linearLightsOut' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.update(AbstractJhlClientAdapter.java:1133)
+	at org.tigris.subversion.subclipse.core.commands.UpdateResourcesCommand.run(UpdateResourcesCommand.java:81)
+	at org.tigris.subversion.subclipse.ui.operations.UpdateOperation.execute(UpdateOperation.java:82)
+	at org.tigris.subversion.subclipse.ui.operations.RepositoryProviderOperation.execute(RepositoryProviderOperation.java:74)
+	at org.tigris.subversion.subclipse.ui.operations.SVNOperation.run(SVNOperation.java:90)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext.run(JobRunnableContext.java:144)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext$ResourceJob.runInWorkspace(JobRunnableContext.java:72)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Inheritance\src\linearLightsOut' is too old (format 10, created by Subversion 1.6)
+
+	at org.apache.subversion.javahl.SVNClient.update(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.update(AbstractJhlClientAdapter.java:1128)
+	... 8 more
+
+!ENTRY org.tigris.subversion.subclipse.core 4 -6 2014-03-18 17:06:52.055
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Inheritance' is too old (format 10, created by Subversion 1.6)
+
+!STACK 0
+org.tigris.subversion.svnclientadapter.SVNClientException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Inheritance' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.update(AbstractJhlClientAdapter.java:1133)
+	at org.tigris.subversion.subclipse.core.commands.UpdateResourcesCommand.run(UpdateResourcesCommand.java:81)
+	at org.tigris.subversion.subclipse.ui.operations.UpdateOperation.execute(UpdateOperation.java:82)
+	at org.tigris.subversion.subclipse.ui.operations.RepositoryProviderOperation.execute(RepositoryProviderOperation.java:74)
+	at org.tigris.subversion.subclipse.ui.operations.SVNOperation.run(SVNOperation.java:90)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext.run(JobRunnableContext.java:144)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext$ResourceJob.runInWorkspace(JobRunnableContext.java:72)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Inheritance' is too old (format 10, created by Subversion 1.6)
+
+	at org.apache.subversion.javahl.SVNClient.update(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.update(AbstractJhlClientAdapter.java:1128)
+	... 8 more
+!SESSION 2014-03-19 17:52:05.094 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-19 17:52:30.612
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-19 17:52:30.622
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-03-26 21:21:07.232 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-26 21:21:23.877
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-26 21:21:23.885
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:38.213
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Faces
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:401)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:423)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2327)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:126)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:826)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:38.214
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:38.214
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:39.132
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: EncapsulationExamples
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\EncapsulationExamples\bin\citytemperatures' is not a working copy
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:39.132
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:39.132
+!MESSAGE org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\EncapsulationExamples\bin\citytemperatures' is not a working copy
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:39.372
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Exam1-201410
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam1-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:39.372
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:39.372
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam1-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:39.506
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Exam2-201420
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam2-201420\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:39.506
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:39.506
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam2-201420\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:39.925
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: FinalExamPractice-201410
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\FinalExamPractice-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:39.926
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:39.926
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\FinalExamPractice-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:40.355
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: LinearLightsOut
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\LinearLightsOut\bin\linearLightsOut' is not a working copy
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:40.355
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:40.355
+!MESSAGE org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\LinearLightsOut\bin\linearLightsOut' is not a working copy
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:40.408
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: LodeRunner
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\LodeRunner-master\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:40.408
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:40.408
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\LodeRunner-master\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:22:40.426
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: MergeSortSImple
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\MergeSortSImple\bin\comparable' is not a working copy
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:22:40.426
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:22:40.427
+!MESSAGE org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\MergeSortSImple\bin\comparable' is not a working copy
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-26 21:26:11.217
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Faces
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:178)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:401)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:423)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2327)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:126)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:826)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-26 21:26:11.217
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:26:11.217
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2014-03-26 21:26:11.241
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.subclipse.core.SVNException.wrapException(SVNException.java:101)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.refreshStatus(StatusCacheManager.java:293)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager.refreshStatus(FileModificationManager.java:232)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager.access$2(FileModificationManager.java:223)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager$2.run(FileModificationManager.java:188)
+	at org.tigris.subversion.subclipse.core.util.JobUtility$1$1.run(JobUtility.java:22)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.tigris.subversion.subclipse.core.util.JobUtility$1.run(JobUtility.java:20)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tigris.subversion.subclipse.core.SVNException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.subclipse.core.SVNException.wrapException(SVNException.java:91)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:61)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.refreshStatus(StatusCacheManager.java:270)
+	... 7 more
+Caused by: org.tigris.subversion.svnclientadapter.SVNClientException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:607)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:565)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:558)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:551)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:544)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:56)
+	... 8 more
+Caused by: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.apache.subversion.javahl.SVNClient.status(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:585)
+	... 13 more
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:26:11.241
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.subclipse.core.SVNException.wrapException(SVNException.java:91)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:61)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.refreshStatus(StatusCacheManager.java:270)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager.refreshStatus(FileModificationManager.java:232)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager.access$2(FileModificationManager.java:223)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager$2.run(FileModificationManager.java:188)
+	at org.tigris.subversion.subclipse.core.util.JobUtility$1$1.run(JobUtility.java:22)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.tigris.subversion.subclipse.core.util.JobUtility$1.run(JobUtility.java:20)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tigris.subversion.svnclientadapter.SVNClientException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:607)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:565)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:558)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:551)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:544)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:56)
+	... 8 more
+Caused by: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.apache.subversion.javahl.SVNClient.status(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:585)
+	... 13 more
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:26:11.241
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+!STACK 0
+org.tigris.subversion.svnclientadapter.SVNClientException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:607)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:565)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:558)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:551)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:544)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:56)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.refreshStatus(StatusCacheManager.java:270)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager.refreshStatus(FileModificationManager.java:232)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager.access$2(FileModificationManager.java:223)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.FileModificationManager$2.run(FileModificationManager.java:188)
+	at org.tigris.subversion.subclipse.core.util.JobUtility$1$1.run(JobUtility.java:22)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.tigris.subversion.subclipse.core.util.JobUtility$1.run(JobUtility.java:20)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\src' is too old (format 10, created by Subversion 1.6)
+
+	at org.apache.subversion.javahl.SVNClient.status(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:585)
+	... 13 more
+
+!ENTRY org.tigris.subversion.subclipse.core 4 -6 2014-03-26 21:27:20.661
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces' is too old (format 10, created by Subversion 1.6)
+
+!STACK 0
+org.tigris.subversion.svnclientadapter.SVNClientException: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces' is too old (format 10, created by Subversion 1.6)
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:607)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:565)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:558)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:551)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:544)
+	at org.tigris.subversion.subclipse.core.commands.GetStatusCommand.run(GetStatusCommand.java:56)
+	at org.tigris.subversion.subclipse.ui.actions.CommitAction.getModifiedResources(CommitAction.java:197)
+	at org.tigris.subversion.subclipse.ui.actions.CommitAction$1.run(CommitAction.java:108)
+	at org.tigris.subversion.subclipse.ui.repository.RepositoryManager.run(RepositoryManager.java:375)
+	at org.tigris.subversion.subclipse.ui.actions.SVNAction$1.run(SVNAction.java:231)
+	at org.tigris.subversion.subclipse.ui.actions.SVNAction$2.run(SVNAction.java:240)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.tigris.subversion.subclipse.ui.actions.SVNAction.run(SVNAction.java:237)
+	at org.tigris.subversion.subclipse.ui.actions.CommitAction.execute(CommitAction.java:104)
+	at org.tigris.subversion.subclipse.ui.actions.SVNAction.run(SVNAction.java:56)
+	at org.eclipse.ui.actions.ActionDelegate.runWithEvent(ActionDelegate.java:70)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4170)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+Caused by: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces' is too old (format 10, created by Subversion 1.6)
+
+	at org.apache.subversion.javahl.SVNClient.status(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:585)
+	... 45 more
+!SESSION 2014-03-27 21:18:21.706 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-03-27 21:18:38.992
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Faces
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:178)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-27 21:18:39.009
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-03-27 21:18:39.009
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-27 21:18:42.669
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-27 21:18:42.670
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-03-27 22:05:58.574 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-27 22:06:12.127
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-03-27 22:06:12.128
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-04-03 22:19:17.715 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-03 22:19:28.966
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-03 22:19:28.972
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-04-04 00:21:43.715 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-04 00:21:52.732
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-04 00:21:52.733
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-04-04 19:26:38.079 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-04 19:26:48.336
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-04 19:26:48.430
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:24.665
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Exam1-201410
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:401)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:423)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2327)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:126)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:826)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam1-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:24.666
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:24.666
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam1-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:25.918
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: EncapsulationExamples
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\EncapsulationExamples\bin\citytemperatures' is not a working copy
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:25.918
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:25.918
+!MESSAGE org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\EncapsulationExamples\bin\citytemperatures' is not a working copy
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:26.404
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Exam2-201420
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam2-201420\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:26.404
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:26.404
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Exam2-201420\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:26.503
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Faces
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:26.503
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:26.503
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\Faces\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:26.907
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: FinalExamPractice-201410
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\FinalExamPractice-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:26.907
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:26.907
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\csse220\FinalExamPractice-201410\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:27.385
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: LinearLightsOut
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\LinearLightsOut\bin\linearLightsOut' is not a working copy
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:27.385
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:27.385
+!MESSAGE org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\LinearLightsOut\bin\linearLightsOut' is not a working copy
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:27.446
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: LodeRunner
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\LodeRunner-master\bin' is too old (format 10, created by Subversion 1.6)
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:27.446
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:27.446
+!MESSAGE org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+svn: Working copy 'D:\EclipseWorkspaces\LodeRunner-master\bin' is too old (format 10, created by Subversion 1.6)
+
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-04-05 00:27:27.455
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: MergeSortSImple
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\MergeSortSImple\bin\comparable' is not a working copy
+
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-04-05 00:27:27.455
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2014-04-05 00:27:27.455
+!MESSAGE org.apache.subversion.javahl.ClientException: Path is not a working copy directory
+svn: 'D:\EclipseWorkspaces\csse220\MergeSortSImple\bin\comparable' is not a working copy
+
+!SESSION 2014-04-06 21:54:38.334 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-06 21:54:55.579
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-06 21:54:55.587
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-04-11 21:02:25.842 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-11 21:02:51.509
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-11 21:02:51.517
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-04-14 16:22:25.532 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-14 16:22:52.734
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-14 16:22:52.745
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-05-12 16:50:56.453 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-05-12 16:51:16.639
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-05-12 16:51:16.649
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-05-12 16:57:46.609 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-05-12 16:57:53.208
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-05-12 16:57:53.209
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-05-12 18:13:39.857 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-05-12 18:13:55.500
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-05-12 18:13:55.501
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-06-07 22:09:58.718 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-06-07 22:10:26.421
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-06-07 22:10:26.431
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pengdi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
